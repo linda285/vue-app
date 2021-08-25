@@ -1,4 +1,9 @@
-# vue-app
+# My first project with VueJS.
+
+
+## Documentation
+
+Docs are available at https://cli.vuejs.org/
 
 ## Project setup
 ```
