@@ -11,7 +11,7 @@
       <h4>Calculate the sum of below values:</h4>
       <p><input placeholder="num1" type="number" v-model.number="num1"></p>
       <p><input placeholder="num2" type="number" v-model.number="num2"></p>
-      <h4>Result by "Computed property": {{calculateTotal}}</h4>
+      <h4>Result <small>(by Computed property)</small>: {{calculateTotal}}</h4>
       <p>Or try with on click event: <button v-on:click="onClick">Calculate</button></p>
     </section>
   </div>
