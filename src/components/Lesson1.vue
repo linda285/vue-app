@@ -2,7 +2,7 @@
   <div class="container">
     <h1>{{ msg }}</h1>
     <section class="lesson">
-      <h2>Lesson 1</h2>
+      <h2>1. Lesson 1</h2>
       <h4>Can you guess my name ?</h4>
       <p><input v-model="myName" placeholder="Enter something here..."></p>
       <p v-if="myName === 'Giang'">Message is: Yayyy! "{{myName}}" is my name.</p>
@@ -12,7 +12,7 @@
       <p><input placeholder="num1" type="number" v-model.number="num1"></p>
       <p><input placeholder="num2" type="number" v-model.number="num2"></p>
       <h4>Result <small>(by Computed property)</small>: {{calculateTotal}}</h4>
-      <p>Or try with on click event: <button v-on:click="onClick">Calculate</button></p>
+      <p>Or try with on click event: <button @click="onClick">Calculate</button></p>
     </section>
   </div>
 </template>
@@ -57,9 +57,5 @@ li {
 a {
   color: #42b983;
 }
-.lesson {
-  width: 400px;
-  margin: 0 auto;
-  text-align: left;
-}
+
 </style>
