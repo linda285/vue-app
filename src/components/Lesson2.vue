@@ -52,6 +52,7 @@ export default {
     },
     onChangeStatus(event) {
       this.checked = event.target.checked;
+      this.newTodo.completed= event.target.checked;
     },
     addTodo() {
       // this.todoItems.push(this.newTodo); // Cach 1
