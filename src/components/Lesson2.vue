@@ -1,14 +1,20 @@
 <template>
   <div class="container">
     <section class="lesson">
-      <h2>2. Lesson 2</h2>
+      <h2>2. Lesson 2 - Todo list</h2>
       <p>I have a todo list:</p>
       <ul id="todoList">
-        <li v-for="todo in todoItems" :key="todo.id">
-          {{ todo.id }}. {{ todo.title }} ( Completed = {{ todo.completed }})
+        <li v-for="(todo, index) in todoItems" :key="`todo-${index}`" :class="{completed: todo.completed}">
+          {{ todo.id }}. {{ todo.title }} - {{todo.completed ? "Done" : "Not done"}}
         </li>
       </ul>
-
+      <div>
+        <input type="text" :value="newTodo.id" @input="onChangeId($event)" placeholder="Enter the id">
+        <input type="text" :value="newTodo.title" @input="onChangeTitle($event)">
+        <input type="checkbox" id="checkbox1" @input="onChangeStatus($event)">
+        <label for="checkbox1">{{checked ? "Done" : "Not done"}}</label>
+      </div>
+      <div><button @click="addTodo">Add</button></div>
     </section>
   </div>
 </template>
@@ -34,7 +40,24 @@ export default {
       title: 'Todo task D',
       completed: false,
     }],
+    newTodo: {id: "", title: "New todo", completed: false},
+    checked: false
   }),
+  methods: {
+    onChangeTitle(event) {
+      this.newTodo.title = event.target.value;
+    },
+    onChangeId(event) {
+      this.newTodo.id = event.target.value;
+    },
+    onChangeStatus(event) {
+      this.checked = event.target.checked;
+    },
+    addTodo() {
+      // this.todoItems.push(this.newTodo); // Cach 1
+      this.todoItems = [...this.todoItems, this.newTodo]
+    }
+  }
 }
 </script>
 

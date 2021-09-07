@@ -29,7 +29,7 @@ export default {
   margin-top: 20px;
 }
 .lesson {
-  width: 400px;
+  width: 500px;
   margin: 0 auto 40px;
   text-align: left;
 }
