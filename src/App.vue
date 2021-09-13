@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" width="100" height="100">
-    <Lesson1 msg="Welcome to My Vue.js App"/>
-    <Lesson2 />
+    <h1>Welcome to My Vue.js App</h1>
+    <Lesson1 heading="Lession 1"/>
+    <Lesson2 heading="Lession 2 - Todo list"/>
   </div>
 </template>
 
 <script>
-import Lesson1 from './components/Lesson1.vue'
+import Lesson1 from './components/Lesson1'
 import Lesson2 from './components/Lesson2'
 
 export default {

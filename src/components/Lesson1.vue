@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-    <h1>{{ msg }}</h1>
     <section class="lesson">
-      <h2>1. Lesson 1</h2>
+      <h2>1. {{ heading }}</h2>
       <h4>Can you guess my name ?</h4>
       <p><input v-model="myName" placeholder="Enter something here..."></p>
       <p v-if="myName === 'Giang'">Message is: Yayyy! "{{myName}}" is my name.</p>
@@ -19,9 +18,9 @@
 
 <script>
 export default {
-  name: 'Lesson 1',
+  name: 'Lesson1',
   props: {
-    msg: String
+    heading: String
   },
   data: () => ({
     myName: "",
